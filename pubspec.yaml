@@ -1,0 +1,45 @@
+name: gym_workout_app
+description: "Aplicativo de treinos de academia com demonstrações em GIF, integrado à ExerciseDB (RapidAPI)."
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Camada de rede (timeouts, interceptors, retry) - design
+  dio: ^5.4.0
+
+  # Cache de imagens/GIFs (placeholder e tratamento de erro integrados)
+  cached_network_image: ^3.3.1
+
+  # Persistência local (cache de exercícios e treinos)
+  sqflite: ^2.3.2
+
+  # Gerenciamento de estado (BLoC/Cubit)
+  flutter_bloc: ^8.1.5
+
+  # Detecção de conectividade (suporte offline)
+  connectivity_plus: ^6.0.1
+
+  # Normalização de busca (remoção de diacríticos)
+  diacritic: ^0.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+  # SQLite em memória para testes
+  sqflite_common_ffi: ^2.3.2+1
+
+  # Property-Based Testing
+  glados: ^1.1.6
+
+flutter:
+  uses-material-design: true
